@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho da Dilma</title>
+    <style>
+        header img{
+            display: block;
+            margin: auto;
+            max-width: 100px;
+            border-radius: 120px;
+            box-shadow: 0px 0px 0px 2px rgb(255, 255, 0);
+        }
+
+        .letra img{
+            display: block;
+            margin: auto;
+            max-width: 200px;
+        }
+
+        .txt {
+            padding-bottom: 10px;
+        }
+
+        .txt p{
+            text-align: center;
+            font-size: small;
+            max-width: 350px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .car a{
+            text-align: center;
+            margin: auto;
+            display: block;
+            padding: 10px;
+            color: black;
+            font-size: small;
+        }
+        
+        .car h1{
+            text-align: center;
+            box-shadow: 0px 0px 1px 0px black;
+            font-size: medium;
+            max-width: 140px;
+            margin: auto;
+            background-color: yellow;
+        }
+        
+        .local h1{
+            text-align: center;
+            box-shadow: 0px 0px 1px 0px black;
+            font-size: medium;
+            max-width: 140px;
+            margin: auto;
+            background-color: yellow;
+        }
+        
+        .local p{
+            text-align: center;
+            font-size: small;
+            background-color: black;
+            color: white;
+            max-width: 240px;
+            margin: auto;
+           
+
+        }
+
+        .local {
+           padding: 20px;
+        }
+  
+        .carousel {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: auto;
+            padding: 5px;
+           
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            margin: auto;
+            display: block;
+        }
+
+        .carousel-slide img {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-buttons button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        @media (max-width: 600px) {
+            .carousel-buttons button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+
+        .roda {
+            padding: 20px;
+        }
+
+        .roda p{
+            text-align: center;
+            font-size: xx-small;
+        }
+
+      
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="375678342_340337895087689_5724383112102475065_n.jpg" alt="">
+    </header>
+      <div class="letra">
+        <img src="giphy.gif" alt="">
+      </div>
+      <div class="txt">
+       <p>
+        "🌊 Sabores do Mar, à Beira-Mar! 🍤
+
+Venha curtir a brisa do oceano enquanto saboreia o melhor dos frutos do mar e porções irresistíveis! 
+       </p>
+      </div>
+
+      <div class="carousel">
+        <div class="carousel-track">
+            <div class="carousel-slide"><img src="Polish_20250103_152222220.jpg" alt="Image 1"></div>
+            <div class="carousel-slide"><img src="Polish_20250103_152255403.jpg" alt="Image 2"></div>
+            <div class="carousel-slide"><img src="Polish_20250103_152329615.jpg" alt="Image 3"></div>
+        </div>
+        <div class="carousel-buttons">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.getElementById('next');
+        const prevButton = document.getElementById('prev');
+
+        let currentIndex = 0;
+
+        function updateSlidePosition() {
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlidePosition();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlidePosition();
+        });
+
+        window.addEventListener('resize', updateSlidePosition);
+    </script>
+      
+      <div class="local">
+        <h1>LOCALIZAÇÃO</h1>
+        <p>ENSEADA DE BRITO, PALHOÇA-SC</p>
+      </div>
+      <div class="car">
+        <h1>CARDÁPIO</h1>
+        <a href="">CLIQUE AQUI PARA ACESSAR NOSSO CARDÁPIO.</a>
+      </div>
+      <div class="roda">
+        <p>TODOS OS DIREITOS RESERVADOS (VPDIGITAL@2025)</p>
+      </div>
+  
+</body>
+</html>
