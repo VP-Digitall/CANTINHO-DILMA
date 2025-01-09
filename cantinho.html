@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho da Dilma</title>
+    <style>
+
+        body{
+            background-color: yellow;
+           
+        }
+
+        header img{
+            display: block;
+            margin: auto;
+            max-width: 100px;
+            border-radius: 120px;
+            box-shadow: 0px 0px 0px 2px black;
+        }
+
+        header p{
+            text-align: center;
+        }
+        
+        nav{
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            padding: 10px;
+            max-width: 350px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        
+        
+
+        nav ul {
+           
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            
+
+          
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+           
+           
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0px 0px 5px black;
+            background-color: yellow;
+            border-radius: 2px;
+           
+        }
+
+        nav ul li  a:hover{
+            color: white;
+            background-color: black;
+        }
+
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #location .map-container {
+            max-width: 400px;
+            max-height: 300px;
+            overflow: hidden;
+            display: block;
+            margin: auto;
+        }
+
+        #location h2{
+            background-color: black;
+            color: white;
+            max-width: 250px;
+            margin: auto;
+        }
+
+        #services{
+            padding: 50px;
+        }
+
+        #services h2{
+            background-color: black;
+            color: white;
+            max-width: 250px;
+            margin: auto; 
+          
+        }
+
+        #services p{
+            background-color: white;
+            max-width: 150px;
+            margin: auto;
+            padding: 5px;
+            box-shadow: 0px 0px 8px black;
+        }
+
+      
+           
+        
+
+        .carousel {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 200px;
+            flex-shrink: 0;
+            margin: auto;
+        }
+
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1;
+        }
+
+        .carousel .prev {
+            left: 10px;
+        }
+
+        .carousel .next {
+            right: 10px;
+        }
+
+        footer {
+           font-size: xx-small;
+           text-align: center;
+        }
+
+        .lo p{
+            text-align: center;
+            background-color: white;
+            max-width: 300px;
+            margin: auto;
+            border-radius: 5px;
+            
+        }
+
+        .car h2{
+           background-color: blue;
+           max-width: 250px;
+           text-align: center;
+           margin: auto;
+           color: white;
+           box-shadow: 0px 0px 6px black;
+        }
+
+        .car p{
+            text-align: center;
+            color: black;
+            text-decoration: underline blue;
+        }
+
+        #gallery .carousel  {
+            box-shadow: 0px 0px 50px black;
+        }
+
+        #gallery .carousel img {
+            box-shadow: 0px 0px 50px black;
+        }
+
+
+
+        #gallery h2{
+            background-color: black;
+            color: white;
+            max-width: 250px;
+            margin: auto;
+           
+        }
+
+    </style>
+    <script src="script.js" defer></script>
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="375678342_340337895087689_5724383112102475065_n.jpg" alt="">
+        <p>
+            "Sabores do Mar, Vista de Encantar – Sua Petiscaria à Beira-Mar!"
+        </p>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#location">LOCAL</a></li>
+            <li><a href="#services">SERVIÇOS</a></li>
+            <li><a href="#gallery">GALERIA</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="location">
+    <h2>LOCALIZAÇÃO</h2>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3529.5006251279924!2d-48.6306162!3d-27.7943572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95272e8790306075%3A0x90abf19b06863197!2sR.%20da%20Praia%2C%20672%20-%20Enseada%20de%20Brito%2C%20Palho%C3%A7a%20-%20SC%2C%2088139-453!5e0!3m2!1spt-BR!2sbr!4v1736311347893!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"></iframe>
+    </div>
+   
+</section>
+<div class="lo">
+    <p>ENSEADA DE BRITO, PALHOÇA-SC.</p>
+    
+</div>
+
+<section id="services">
+    <h2>SERVIÇOS</h2>
+     <p>PETISCARIA</p>
+     <P>MERCADO</P>
+     <P>BAR</P>
+</section>
+
+<div class="car">
+    <h2>
+        CARDÁPIO
+    </h2>
+    <a href="">
+        <p>CLIQUE AQUI PARA ACESSAR.</p>
+    </a>
+</div>
+
+<section id="gallery">
+    <h2>GALERIA</h2>
+    <div class="carousel">
+        <button class="prev">&#10094;</button>
+        <div class="carousel-images">
+            <img src="Polish_20250103_152222220.jpg" alt="Photo 1">
+            <img src="Polish_20250103_152255403.jpg" alt="Photo 2">
+            <img src="Polish_20250103_152329615.jpg" alt="Photo 3">
+        </div>
+        <button class="next">&#10095;</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 VPDIGITAL. TODOS OS DIREITOS RESERVADOS.</p>
+</footer>
+   
+    
+  
+</body>
+</html>
